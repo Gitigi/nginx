@@ -56,7 +56,7 @@ with open('monitor.txt','w') as l:
 for cont in cli.containers():
     try:
         if node_id == cont['Labels']['com.docker.swarm.node.id']:
-            if cont['State'] == 'running' and cont['Image'] == image:
+            if cont['State'] == 'running' and cont['Image'].split('@')[0] == image:
                 register(cont['Id'])
     except Exception:
         with open('monitor_error.txt','w') as l:
@@ -67,7 +67,7 @@ for cont in cli.containers():
 for event in events:
     try:
         if node_id == event['Actor']['Attributes']['com.docker.swarm.node.id']:
-            if event['from'] == image:
+            if event['from'].split('@')[0] == image:
                 with open('monitor.txt','a') as l:
                     l.write(str(event))
                     l.write("\n\n\n")
