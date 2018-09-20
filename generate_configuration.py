@@ -36,7 +36,7 @@ port80_443 = '''
     server {
         listen       80;
         server_name  0.0.0.0;
-        rewrite ^ https://$http_host$request_uri? permanent;    # force redirect http to https
+        return 302 https://$http_host$request_uri;    # force redirect http to https(301 - permanent, 302 - temporary)
     }
 '''
 
