@@ -13,6 +13,10 @@ port80 = '''
         charset     utf-8;
         sendfile        on;
         gzip  on;
+        gzip_vary on;
+        gzip_proxied any;
+        gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
+        
         server_tokens off;
         client_max_body_size 75M;
         
@@ -48,6 +52,9 @@ port443 = '''
         charset     utf-8;
         sendfile        on;
         gzip  on;
+        gzip_vary on;
+        gzip_proxied any;
+        gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
         
         ssl_certificate     /usr/src/cacert.crt;
         ssl_certificate_key /usr/src/cacert.key;
