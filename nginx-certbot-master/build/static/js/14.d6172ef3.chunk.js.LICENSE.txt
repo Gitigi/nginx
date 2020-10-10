@@ -1,0 +1,11 @@
+/*! CellEdit 1.0.19
+ * ©2016 Elliott Beaty - datatables.net/license
+ */
+
+/*! version : 4.17.47
+ =========================================================
+ bootstrap-datetimejs
+ https://github.com/Eonasdan/bootstrap-datetimepicker
+ Copyright (c) 2015 Jonathan Peterson
+ =========================================================
+ */
