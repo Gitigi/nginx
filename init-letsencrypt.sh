@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(shulepoint.co.ke gcc.shulepoint.co.ke gccwelfare.shulepoint.co.ke)
+domains=(gcc.shulepoint.co.ke gccwelfare.shulepoint.co.ke)
 rsa_key_size=4096
 data_path="./certbot"
 email="" # Adding a valid address is strongly recommended
