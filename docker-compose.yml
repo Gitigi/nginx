@@ -2,7 +2,7 @@ version: '3'
 services:
   #Nginx Service
   nginx:
-    image: nginx:alpine
+    build: .
     restart: unless-stopped
     tty: true
     network_mode: "host"
@@ -14,7 +14,7 @@ services:
     volumes:
       - ./conf.d:/etc/nginx/conf.d/
       - letsencrypt:/etc/letsencrypt
-      
+
 volumes:
   letsencrypt:
     driver: local
